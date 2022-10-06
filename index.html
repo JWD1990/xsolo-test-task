@@ -1,15 +1,58 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xsolo - test task</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Xsolo - test task</title>
 
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/media.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Nunito:wght@300;600;700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/media.css">
 </head>
 <body>
-    
+	<div class="page-container">
+		<!-- 
+			Верхний блок сайта с промо текстом, видосом и навигацией
+		-->
+		<header class="header__container">
+			<!-- Блок с лого компании, промо текстом видосиком -->
+			<div class="header__promo-block">
+				<div class="header__promo-text-container">
+					<div class="header__company-logo-contaner">
+						<img class="company-logo" src="img/logo.png" alt="Company logo">
+					</div>
+					<p class="header__promo-text title-text">
+						Your
+						<span class="accent-decore header__promo-text_accent-decore">personalized</span>
+						coffee
+					</p>
+				</div>
+				<div class="header__promo-video-container">
+					<img class="header__promo-video-background" src="img/video-background.jpg" alt="Video background image">
+					<button class="header__play-btn circe" alt="Play btn"></button>
+				</div>
+			</div>
+			<!-- Блок с краткой информацией о числе товаров в корзине и навигацией  -->
+			<div class="header__side-panel side-panel-decore">
+				<div class="header__basket-info">
+					<img class="basket-icon" src="img/shop-icon.svg" alt="Backet icon">
+					<div class="basket-info__count-item-widget accent-decore circe">2</div>
+				</div>
+				<nav class="header__nav">
+					<a href="#" class="header__nav-link header__nav-link_active link">TRANG CHỦ</a>
+					<a href="#" class="header__nav-link link">COFFEE</a>
+					<a href="#" class="header__nav-link link">PHIN MẠ MÀU</a>
+					<a href="#" class="header__nav-link link">COMBO PHIN PHÊ</a>
+					<a href="#" class="header__nav-link link">GIFTSET</a>
+					<a href="#" class="header__nav-link link">LIÊN HỆ</a>
+				</nav>
+			</div>
+		</header>
+
+	</div>
 </body>
 </html>

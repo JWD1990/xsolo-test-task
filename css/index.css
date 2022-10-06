@@ -1,0 +1,168 @@
+:root {
+	--primary-color: #415167;
+	--accent-background-color: #C7A17A;
+	--accent-text-color: #F9F5E8;
+	--light-gray: #EDF0F5;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Nunito', sans-serif;
+	color: var(--primary-color)
+}
+
+p {
+	margin: 0;
+}
+
+.page-container {
+	background-color: #F9FBFF;
+	max-width: 1400px; /* макет под 1400 ориентирован */
+    min-width: 320px;
+	margin: 0 auto;
+}
+
+/* -------------- */
+/* general styles */
+/* -------------- */
+
+.accent-decore {
+	color: var(--accent-text-color);
+	background-color: var(--accent-background-color);
+}
+
+.side-panel-decore {
+	background-color: var(--primary-color);
+}
+
+.title-text {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+
+.circe {
+	border: 0 solid transparent;
+	border-radius: 50%;
+}
+
+.link {
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 16px;
+}
+
+/* ------------- */
+/* header styles */
+/* ------------- */
+
+/* Блок с лого компании, промо текстом и видосиком */
+.header__container {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 9fr 3fr;
+	box-sizing: border-box;
+}
+
+.header__promo-block {
+	display: grid;
+    grid-template-columns: 3fr 5fr;
+}
+.header__promo-text-container {
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    padding-top: 76px;
+}
+.header__company-logo-contaner {
+	display: flex;
+	justify-content: center;
+}
+.company-logo {
+	max-width: 110px;
+}
+.header__promo-text {
+	font-size: 54px;
+	line-height: 70px;
+	position: absolute;
+	bottom: 76px;
+	left: 0;
+    transform: translateX(30%);
+}
+.header__promo-text_accent-decore {
+	padding: 0 15px;
+	position: relative;
+    left: -13px;
+}
+.header__promo-video-container {
+	position: relative;
+	display: flex;
+}
+.header__promo-video-background {
+	max-width: 670px;
+}
+/* из фигмы не понял как нормально выгрузить... нарисовал */
+.header__play-btn {
+	width: 54px;
+    height: 54px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    background: #fff;
+    box-shadow: 0 0 15px rgb(0 0 0 / 50%);
+}
+.header__play-btn:before {
+	position: absolute;
+	content: '';
+	top: 50%;
+	left: 50%;
+	transform: translate(-35%, -50%);
+	border: 7px solid transparent;
+	border-left: 10px solid var(--accent-background-color);
+	border-right-width: 0;
+}
+
+/* Блок с краткой информацией о числе товаров в корзине и навигацией */
+.header__side-panel {
+	padding: 89px 0 0 56px;
+}
+.header__basket-info {
+	position: relative;
+}
+.basket-info__count-item-widget {
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	line-height: 20px;
+	position: absolute;
+    top: -13px;
+    left: 14px;
+	font-size: 14px;
+}
+
+.header__nav {
+	display: flex;
+    flex-direction: column;
+	margin-top: 118px;
+}
+.header__nav-link {
+	color: var(--light-gray);
+	font-weight: 300;
+}
+.header__nav-link:not(:last-child) {
+	margin-bottom: 30px;
+}
+.header__nav-link_active {
+	font-weight: 700;
+}
+.header__nav:hover .header__nav-link {
+	font-weight: 300;
+}
+.header__nav:hover .header__nav-link:hover {
+	font-weight: 700;
+}
