@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 :root {
 	--primary-color: #415167;
 	--accent-color-1: #C7A17A;
@@ -28,7 +30,6 @@ button {
 
 .page-container {
 	background-color: #F9FBFF;
-	max-width: 1400px; /* макет под 1400 ориентирован */
     min-width: 320px;
 	margin: 0 auto;
 }
@@ -116,10 +117,11 @@ section:before {
 	/*
 		width, чтобы две колоки и нужное кол-во карточек в строке,
 		проставит нам наша логика JS при ините слайдера
+		(не для второго слайдера)
 	*/
 }
 
-.card:not(.inactive):hover {
+.card.hovered:not(.inactive):hover {
 	box-shadow: 0px 4px 24px 0px rgba(205, 205, 205, 0.5);
 }
 .card.inactive {
@@ -131,7 +133,7 @@ section:before {
 	position: absolute;
 	top: 0;
 	left: 0;
-	/* мб у нас будут предполагаться не стат размеры */
+	/* мб у нас будут предполагаться не статичные размеры */
 	bottom: 0;
 	right: 0;
 	z-index: 2;
@@ -140,9 +142,6 @@ section:before {
 	display: flex;
 }
 .card__img-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	background-color: var(--light-gray);
 }
 .card__content-wrapper-container {
@@ -187,6 +186,7 @@ section:before {
 	position: relative;
 	left: 15px;
 }
+/* это скругления у кнопки */
 .card__buy-btn_theme_accent-decore.card__buy-btn_normal:before,
 .card__buy-btn_theme_accent-decore.card__buy-btn_normal:after {
 	width: 30px;
@@ -196,6 +196,7 @@ section:before {
 	position: relative;
 	left: 20px;
 }
+/* это скругления у кнопки */
 .card__buy-btn_theme_accent-decore.card__buy-btn_big:before,
 .card__buy-btn_theme_accent-decore.card__buy-btn_big:after {
 	width: 40px;
@@ -203,6 +204,7 @@ section:before {
 .card__buy-btn_theme_accent-decore {
 	position: relative;
 }
+/* это скругления у кнопки */
 .card__buy-btn_theme_accent-decore:before,
 .card__buy-btn_theme_accent-decore:after {
     content: '';
@@ -244,6 +246,7 @@ section:before {
 	display: grid;
 	grid-template-columns: 9fr 3fr;
 	box-sizing: border-box;
+	height: 768px;
 }
 
 .header__promo-block {
@@ -280,8 +283,8 @@ section:before {
     left: -13px;
 }
 .header__promo-video-container {
-	position: relative;
-	display: flex;
+	background: url('../img/video-background.jpg') center;
+    background-size: cover;
 }
 .header__promo-video-background {
 	max-width: 670px;
@@ -290,10 +293,7 @@ section:before {
 .header__play-btn {
 	width: 54px;
     height: 54px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+	position: relative;
     background: #fff;
     box-shadow: 0 0 15px rgb(0, 0, 0, 0.5);
 }
@@ -441,6 +441,50 @@ section:before {
 
 .giftset-section__title-container {
 	margin-bottom: 66px;
+}
+
+.giftset-section__content-wrapper {
+	display: flex;
+	justify-content: flex-end;
+	width: 1138px;
+	height: 460px;
+	margin: 0 auto;
+	/* адаптив через flex-direction: column */
+}
+
+.giftset-section__items-container {
+	height: 100%;
+	width: 794px;
+}
+
+.giftset-section-item {
+	height: 100%;
+	width: 100%;
+}
+.giftset-section-item.inactive {
+	display: none;
+}
+.giftset-section-item__img-container {
+	width: 195px;
+	position: relative;
+	background-color: #fff;
+}
+.giftset-section-item__img {
+	position: absolute;
+	top: 0;
+	left: 0;
+    transform: translateX(-50%);
+}
+
+.giftset-section-item__content-wrapper-container {
+	width: 599px;
+	padding: 55px;
+}
+
+.giftset-section__switcher {
+	width: 88px;
+	color: var(--primary-color);
+	background-color: var(--light-gray);
 }
 
 /* ------------------------ */
