@@ -15,57 +15,64 @@
 </head>
 <body>
 	<div class="page-container">
-		<!-- 
+		<!-- -------------------------------------------------------
 			Верхний блок сайта с промо текстом, видосом и навигацией
-		-->
+		-------------------------------------------------------- -->
 		<header class="header__container">
-			<!-- Блок с лого компании, промо текстом видосиком -->
+			<!-- 
+				Блок с лого компании, промо текстом видосиком
+			-->
 			<div class="header__promo-block">
 				<div class="header__promo-text-container">
 					<div class="header__company-logo-contaner">
 						<img class="company-logo" src="img/logo.png" alt="Company logo">
 					</div>
-					<p class="header__promo-text title-text">
+					<h1 class="header__promo-text title-text">
 						Your
 						<span class="accent-decore header__promo-text_accent-decore">personalized</span>
 						coffee
-					</p>
+					</h1>
 				</div>
 				<div class="header__promo-video-container">
 					<img class="header__promo-video-background" src="img/video-background.jpg" alt="Video background image">
-					<button class="header__play-btn circe" alt="Play btn"></button>
+					<button class="header__play-btn circe animation-hover" alt="Play btn"></button>
 				</div>
 			</div>
-			<!-- Блок с краткой информацией о числе товаров в корзине и навигацией  -->
-			<div class="header__side-panel side-panel-decore">
+			<!--
+				Блок с краткой информацией о числе товаров в корзине и навигацией 
+			-->
+			<div class="header__side-panel">
 				<div class="header__basket-info">
 					<img class="basket-icon" src="img/shop-icon.svg" alt="Backet icon">
 					<div class="basket-info__count-item-widget accent-decore circe">2</div>
 				</div>
 				<nav class="header__nav">
-					<a href="#" class="header__nav-link header__nav-link_active link">TRANG CHỦ</a>
-					<a href="#" class="header__nav-link link">COFFEE</a>
-					<a href="#" class="header__nav-link link">PHIN MẠ MÀU</a>
-					<a href="#" class="header__nav-link link">COMBO PHIN PHÊ</a>
-					<a href="#" class="header__nav-link link">GIFTSET</a>
-					<a href="#" class="header__nav-link link">LIÊN HỆ</a>
+					<a href="#" class="header__nav-link header__nav-link_active link animation-hover">TRANG CHỦ</a>
+					<a href="#" class="header__nav-link link animation-hover">COFFEE</a>
+					<a href="#" class="header__nav-link link animation-hover">PHIN MẠ MÀU</a>
+					<a href="#" class="header__nav-link link animation-hover">COMBO PHIN PHÊ</a>
+					<a href="#" class="header__nav-link link animation-hover">GIFTSET</a>
+					<a href="#" class="header__nav-link link animation-hover">LIÊN HỆ</a>
 				</nav>
 			</div>
 		</header>
-		<!-- 
-			Секция с вводно информацией
-		-->
+		<!-- ---------------------------
+			Секция с вводной информацией
+		---------------------------- -->
 		<section class="intro-section">
-			<h1 class="section__title-container intro-section__title-container">
-				<span class="title-container__small-text">Your Personalized Coffee</span>
-				<span class="title-container__big-text title-text">Coffee build your base</span>
+			<h1 class="title-section-container intro-section__title-container">
+				<span class="title-section-container__small-text">Your Personalized Coffee</span>
+				<span class="title-text">Coffee build your base</span>
 			</h1>
+			<!--
+				Карточки
+			-->
 			<div class="intro-section__items-container">
 				<div class="intro-section-item__container">
 					<div class="intro-section-item__img-container">
 						<img src="img/coffee-house.svg" alt="Icon intro info">
 					</div>
-					<div class="title-text-item">Nguồn gốc</div>
+					<div class="card__title-text">Nguồn gốc</div>
 					<div class="intro-section-item__body-text">
 						Những hạt cà phê Arabica, Robusta đạt chất lượng theo tiêu chuẩn quốc tế.
 					</div>
@@ -74,7 +81,7 @@
 					<div class="intro-section-item__img-container">
 						<img src="img/coffee-signboard.svg" alt="Icon intro info">
 					</div>
-					<div class="title-text-item">Nguồn gốc</div>
+					<div class="card__title-text">Nguồn gốc</div>
 					<div class="intro-section-item__body-text">
 						Những hạt cà phê Arabica, Robusta đạt chất lượng theo tiêu chuẩn quốc tế.
 					</div>
@@ -83,7 +90,7 @@
 					<div class="intro-section-item__img-container">
 						<img src="img/coffee-jar.svg" alt="Icon intro info">
 					</div>
-					<div class="title-text-item">Nguồn gốc</div>
+					<div class="card__title-text">Nguồn gốc</div>
 					<div class="intro-section-item__body-text">
 						Những hạt cà phê Arabica, Robusta đạt chất lượng theo tiêu chuẩn quốc tế.
 					</div>
@@ -92,43 +99,98 @@
 					<div class="intro-section-item__img-container">
 						<img src="img/сoffee-machine.svg" alt="Icon intro info">
 					</div>
-					<div class="title-text-item">Nguồn gốc</div>
+					<div class="card__title-text">Nguồn gốc</div>
 					<div class="intro-section-item__body-text">
 						Những hạt cà phê Arabica, Robusta đạt chất lượng theo tiêu chuẩn quốc tế.
 					</div>
 				</div>
 			</div>
+			<!--
+				Карточки конец
+			-->
 		</section>
-		<!-- 
+		<!-- -----------------------
 			Секция с карточками кофе
-		-->
-		<section class="favorite-section">
-			<h1 class="section__title-container">
-				<span class="title-container__small-text">Choose Your Favorite</span>
-				<span class="title-container__big-text title-text">CHUẨN GU ĐÚNG VỊ</span>
+		------------------------ -->
+		<section class="favorite-section zindex-fix">
+			<h1 class="title-section-container favorite-section__title-container">
+				<span class="title-section-container__small-text">Choose Your Favorite</span>
+				<span class="title-text">CHUẨN GU ĐÚNG VỊ</span>
 			</h1>
+			<!--
+				Карточки
+			-->
+			<div class="favorite-section__items-container">
+				<!--
+					Скролл-блок обёртка
+				-->
+				<div class="cards-container">
+					<div class="card card_theme_horizontal favorite-section-item animation-hover">
+						<div class="card__img-container favorite-section-item__img-container flex-centering">
+							<img src="img/coffee-v1.png" alt="Coffee jar Revo Morning Image">
+						</div>
+						<div class="card__content-wrapper-container favorite-section-item__content-wrapper-container flex-centering">
+							<div class="card__content-container">
+								<div class="card__price-info-container">99.000</div>
+								<div class="card__title-text favorite-section-item__title-text">REVO Morning</div>
+								<div>đắng, hậu ngọt, hương hoa</div>
+								<div class="card__action-block favorite-section-item__action-block">
+									<button class="card__buy-btn card__buy-btn_normal card__buy-btn_theme_accent-decore accent-decore animation-hover opacity-hover">
+										<span class="card__buy-btn-text-conteiner">Mua Ngay</span>
+									</button>
+									<a href="#" class="link card__details-link animation-hover opacity-hover">CHI TIẾT</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card card_theme_horizontal favorite-section-item animation-hover inactive">
+						<div class="card__img-container favorite-section-item__img-container flex-centering">
+							<img src="img/coffee-v2.png" alt="Coffee jar Revo Morning Image">
+						</div>
+						<div class="card__content-wrapper-container favorite-section-item__content-wrapper-container flex-centering">
+							<div class="card__content-container">
+								<div class="card__price-info-container">99.000</div>
+								<div class="card__title-text favorite-section-item__title-text">REVO Morning</div>
+								<div>đắng, hậu ngọt, hương hoa</div>
+								<div class="card__action-block favorite-section-item__action-block">
+									<button class="card__buy-btn card__buy-btn_normal card__buy-btn_theme_accent-decore accent-decore animation-hover opacity-hover">
+										<span class="card__buy-btn-text-conteiner">Mua Ngay</span>
+									</button>
+									<a href="#" class="link card__details-link animation-hover opacity-hover">CHI TIẾT</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--
+					Скролл-блок конец
+				-->
+			</div>
+			<!--
+				Карточки конец
+			-->
 		</section>
-		<!-- 
+		<!-- ----------------------------
 			Секция с подарочными наборами
-		-->
-		<section class="giftset-section">
-			<h1 class="section__title-container">
-				<span class="title-container__small-text">Best Gift For Best Friend</span>
-				<span class="title-container__big-text title-text">GIFTSET</span>
+		----------------------------- -->
+		<section class="giftset-section zindex-fix">
+			<h1 class="title-section-container giftset-section__title-container">
+				<span class="title-section-container__small-text">Best Gift For Best Friend</span>
+				<span class="title-text">GIFTSET</span>
 			</h1>
 		</section>
-		<!-- 
-			Секция с компбо (?) наборами
-		-->
-		<section class="combo-section">
-			<h1 class="section__title-container">
-				<span class="title-container__small-text">Your Personalized Coffee</span>
-				<span class="title-container__big-text title-text">COMBO PHIN PHÊ</span>
+		<!-- -----------------------
+			Секция с компбо наборами
+		------------------------ -->
+		<section class="combo-section zindex-fix">
+			<h1 class="title-section-container combo-section__title-container">
+				<span class="title-section-container__small-text">Your Personalized Coffee</span>
+				<span class="title-text">COMBO PHIN PHÊ</span>
 			</h1>
 		</section>
-		<!-- 
+		<!-- ------------------
 			Нижняя секция сайта
-		-->
+		------------------- -->
 		<footer class="footer-container">&#169; Revo Coffee Việt Nam - 2018</footer>
 	</div>
 </body>
