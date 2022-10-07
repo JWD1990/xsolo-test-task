@@ -1,7 +1,7 @@
 :root {
 	--primary-color: #415167;
-	--accent-background-color: #C7A17A;
-	--accent-text-color: #F9F5E8;
+	--accent-color-1: #C7A17A;
+	--accent-color-2: #FFF;
 	--light-gray: #EDF0F5;
 }
 
@@ -12,6 +12,7 @@ body {
 	font-family: 'Nunito', sans-serif;
 	color: var(--primary-color);
 	font-style: normal;
+	font-weight: normal;
 	font-size: 16px;
 	line-height: 20px;
 	text-align: center;
@@ -19,6 +20,10 @@ body {
 
 p, h1 {
 	margin: 0;
+}
+
+button {
+	cursor: pointer;
 }
 
 .page-container {
@@ -33,12 +38,8 @@ p, h1 {
 /* -------------- */
 
 .accent-decore {
-	color: var(--accent-text-color);
-	background-color: var(--accent-background-color);
-}
-
-.side-panel-decore {
-	background-color: var(--primary-color);
+	color: var(--accent-color-2);
+	background-color: var(--accent-color-1);
 }
 
 .title-text {
@@ -56,24 +57,181 @@ p, h1 {
 	text-transform: uppercase;
 	text-decoration: none;
 	font-size: 16px;
+	line-height: 22px;
 }
 
-.section__title-container {
+.flex-centering {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* лучше таргетно наверное делать... */
+.animation-hover {
+	transition: all 0.1s;
+}
+.animation-hover:hover {
+	transition: all 0.1s;
+}
+
+.opacity-hover {
+	transition-property: opacity;
+}
+.opacity-hover:hover {
+	opacity: .7;
+}
+
+section {
+	position: relative;
+}
+section:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	height: 100%;
+	background-color: var(--primary-color);
+}
+.zindex-fix > * {
+	position: relative;
+	z-index: 1;
+}
+
+.title-section-container {
 	font-size: 30px;
 	line-height: 34px;
 	display: flex;
 	flex-direction: column;
 }
 
-.title-container__small-text {
+.title-section-container__small-text {
 	font-size: 20px;
 	font-weight: 600;
 }
 
-.title-text-item {
+.cards-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+	padding: 0 130px;
+	/*
+		width, чтобы две колоки и нужное кол-во карточек в строке,
+		проставит нам наша логика JS при ините слайдера
+	*/
+}
+
+.card:not(.inactive):hover {
+	box-shadow: 0px 4px 24px 0px rgba(205, 205, 205, 0.5);
+}
+.card.inactive {
+	position: relative;
+	opacity: .5;
+}
+.card.inactive:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	/* мб у нас будут предполагаться не стат размеры */
+	bottom: 0;
+	right: 0;
+	z-index: 2;
+}
+.card_theme_horizontal {
+	display: flex;
+}
+.card__img-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--light-gray);
+}
+.card__content-wrapper-container {
+	background-color: #fff;
+	box-sizing: border-box;
+}
+.card__content-container {
+	text-align: left;
+	width: 100%;
+}
+.card__title-text {
 	font-weight: 700;
 	font-size: 24px;
 	line-height: 28px;
+}
+.card__price-info-container {
+	display: flex;
+	align-items: flex-start;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 24px;
+	color: var(--accent-color-1)
+}
+.card__old-price {
+	font-size: 14px;
+	line-height: 17px;
+	color: var(--light-gray);
+}
+.card__action-block {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.card__buy-btn {
+	border: 0;
+	text-transform: uppercase;
+	font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+}
+.card__buy-btn_normal {
+	padding: 8px 7px;
+	position: relative;
+	left: 15px;
+}
+.card__buy-btn_theme_accent-decore.card__buy-btn_normal:before,
+.card__buy-btn_theme_accent-decore.card__buy-btn_normal:after {
+	width: 30px;
+}
+.card__buy-btn_big {
+	padding: 12px 15px;
+	position: relative;
+	left: 20px;
+}
+.card__buy-btn_theme_accent-decore.card__buy-btn_big:before,
+.card__buy-btn_theme_accent-decore.card__buy-btn_big:after {
+	width: 40px;
+}
+.card__buy-btn_theme_accent-decore {
+	position: relative;
+}
+.card__buy-btn_theme_accent-decore:before,
+.card__buy-btn_theme_accent-decore:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background-color: var(--accent-color-1);
+    border: 0 solid transparent;
+    border-radius: 50%;
+    display: block;
+    transform: translateX(-50%);
+}
+.card__buy-btn_theme_accent-decore:before {
+	left: 0;
+	transform: translateX(-50%);
+}
+.card__buy-btn_theme_accent-decore:after {
+	right: 0;
+	transform: translateX(50%);
+}
+.card__buy-btn-text-conteiner {
+	position: relative;
+	z-index: 1;
+}
+.card__details-link {
+	font-weight: 700;
+}
+.card__details-link {
+	color: var(--primary-color)
 }
 
 /* ------------- */
@@ -136,9 +294,8 @@ p, h1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    cursor: pointer;
     background: #fff;
-    box-shadow: 0 0 15px rgb(0 0 0 / 50%);
+    box-shadow: 0 0 15px rgb(0, 0, 0, 0.5);
 }
 .header__play-btn:before {
 	position: absolute;
@@ -147,17 +304,22 @@ p, h1 {
 	left: 50%;
 	transform: translate(-35%, -50%);
 	border: 7px solid transparent;
-	border-left: 10px solid var(--accent-background-color);
+	border-left: 10px solid var(--accent-color-1);
 	border-right-width: 0;
+}
+.header__play-btn:hover {
+	box-shadow: 0 0 15px rgb(0, 0, 0, 0.8);
 }
 
 /* Блок с краткой информацией о числе товаров в корзине и навигацией */
 .header__side-panel {
 	padding: 89px 0 0 56px;
 	text-align: left;
+	background-color: var(--primary-color);
 }
 .header__basket-info {
 	position: relative;
+	cursor: pointer;
 }
 .basket-info__count-item-widget {
 	width: 20px;
@@ -178,6 +340,7 @@ p, h1 {
 .header__nav-link {
 	color: var(--light-gray);
 	font-weight: 300;
+	transition-property: font-weight;
 }
 .header__nav-link:not(:last-child) {
 	margin-bottom: 30px;
@@ -204,22 +367,18 @@ p, h1 {
 }
 
 .intro-section__items-container {
-    display: flex;
-    justify-content: space-between;
+	display: flex;
     margin: 0 auto;
-    max-width: 1106px;
+    justify-content: center;
+    gap: 68px;
+    flex-wrap: wrap;
 }
 .intro-section-item__container {
 	max-width: 226px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 }
-/* .intro-section-item__container:not(:last-child) {
-	margin-left: 68px;
-} */
 .intro-section-item__img-container {
 	display: flex;
+	justify-content: center;
 	padding-bottom: 42px;
 }
 .intro-section-item__body-text {
@@ -230,13 +389,75 @@ p, h1 {
 /* styles for favorit section */
 /* -------------------------- */
 
+.favorite-section {
+	padding: 81px 0 127px 0;
+}
+.favorite-section:before {
+	width: 25%;
+	left: 0;
+}
+
+.favorite-section__title-container {
+	margin-bottom: 72px;
+}
+
+.favorite-section__items-container {
+	position: relative;
+	overflow: hidden;
+}
+
+.favorite-section-item {
+	height: 256px;
+}
+
+.favorite-section-item__img-container {
+	width: 235px;
+}
+.favorite-section-item__content-wrapper-container {
+	width: 325px;
+	padding: 42px;
+}
+
+.favorite-section-item__title-text {
+	margin: 8px 0 24px;
+}
+
+.favorite-section-item__action-block {
+	margin-top: 33px;
+}
+
 /* -------------------------- */
 /* styles for giftset section */
 /* -------------------------- */
 
+.giftset-section {
+	padding: 86px 0 125px 0;
+}
+.giftset-section:before {
+	width: 75%;
+	left: 0;
+	background-color: var(--light-gray);
+}
+
+.giftset-section__title-container {
+	margin-bottom: 66px;
+}
+
 /* ------------------------ */
 /* styles for combo section */
 /* ------------------------ */
+
+.combo-section {
+	padding: 86px 0 128px 0;
+}
+.combo-section:before {
+	width: 25%;
+	right: 0;
+}
+
+.combo-section__title-container {
+	margin-bottom: 64px;
+}
 
 /* ------------- */
 /* footer styles */
