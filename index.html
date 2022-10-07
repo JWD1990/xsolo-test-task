@@ -33,8 +33,7 @@
 						coffee
 					</h1>
 				</div>
-				<div class="header__promo-video-container">
-					<img class="header__promo-video-background" src="img/video-background.jpg" alt="Video background image">
+				<div class="header__promo-video-container flex-centering">
 					<button class="header__play-btn circe animation-hover" alt="Play btn"></button>
 				</div>
 			</div>
@@ -125,7 +124,7 @@
 					Скролл-блок обёртка
 				-->
 				<div class="cards-container">
-					<div class="card card_theme_horizontal favorite-section-item animation-hover">
+					<div class="card card_theme_horizontal favorite-section-item hovered animation-hover">
 						<div class="card__img-container favorite-section-item__img-container flex-centering">
 							<img src="img/coffee-v1.png" alt="Coffee jar Revo Morning Image">
 						</div>
@@ -143,7 +142,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="card card_theme_horizontal favorite-section-item animation-hover inactive">
+					<div class="card card_theme_horizontal favorite-section-item hovered animation-hover inactive">
 						<div class="card__img-container favorite-section-item__img-container flex-centering">
 							<img src="img/coffee-v2.png" alt="Coffee jar Revo Morning Image">
 						</div>
@@ -178,6 +177,40 @@
 				<span class="title-section-container__small-text">Best Gift For Best Friend</span>
 				<span class="title-text">GIFTSET</span>
 			</h1>
+			<div class="giftset-section__content-wrapper">
+				<!--
+					Блок с переключаемыми карточками подарков
+				-->
+				<div class="giftset-section__items-container">
+					<div class="card card_theme_horizontal giftset-section-item">
+						<div class="card__img-container giftset-section-item__img-container">
+							<img class="giftset-section-item__img" src="img/giftset.png" alt="Giftset Image 1">
+						</div>
+						<div class="card__content-wrapper-container giftset-section-item__content-wrapper-container flex-centering">
+							<div class="card__content-container">
+								<div class="card__price-info-container">99.000</div>
+								<div class="card__title-text favorite-section-item__title-text">REVO Morning</div>
+								<div>đắng, hậu ngọt, hương hoa</div>
+								<div class="card__action-block favorite-section-item__action-block">
+									<button class="card__buy-btn card__buy-btn_normal card__buy-btn_theme_accent-decore accent-decore animation-hover opacity-hover">
+										<span class="card__buy-btn-text-conteiner">Mua Ngay</span>
+									</button>
+									<a href="#" class="link card__details-link animation-hover opacity-hover">CHI TIẾT</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--
+					Переключалка карточек
+				-->
+				<div class="giftset-section__switcher">
+
+				</div>
+				<!--
+					Переключалка карточек конец
+				-->
+			</div>
 		</section>
 		<!-- -----------------------
 			Секция с компбо наборами
@@ -187,6 +220,7 @@
 				<span class="title-section-container__small-text">Your Personalized Coffee</span>
 				<span class="title-text">COMBO PHIN PHÊ</span>
 			</h1>
+			<span>тот же слайдер из 3его блока, просто без flex'a в основном контейнере карточки... T_T</span>
 		</section>
 		<!-- ------------------
 			Нижняя секция сайта
